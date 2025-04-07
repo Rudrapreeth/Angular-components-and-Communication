@@ -1,2 +1,4 @@
-<button (click)="changeChildData()">Change Child Data</button>
-<h3>Data Received from Child: {{ receivedData }}</h3>
+<app-child
+  [data]="parentData"
+  (messageToParent)="handleChildMessage($event)">
+</app-child>
